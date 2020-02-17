@@ -19,4 +19,7 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
-
+# First, this converts the time data from strings to integers.
+for i in range(len(calls)):
+    calls[i][3] = int(calls[i][3])
+# Second, 
