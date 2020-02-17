@@ -11,6 +11,8 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
+# This is my additional code to verify that the script was run.
+print("Created texts and calls lists.")
 
 """
 TASK 0:
