@@ -39,6 +39,16 @@ for i in calls:
     else:
         call_dict[i[1]] += i[3]
 
-# This tests whether the call_dict was successfully created.
-for keys, values in call_dict.items():
-    print("Phone Numbers: {}, Times(seconds) : {}.".format(keys, values))
+# This creates the max_list, the list that stores
+# the number with the maximum ammount of time spent on a call.
+# After using a for loop to iterate, the list will have two values,
+# the phone number, and the time in seconds.
+max_list = ['dummy_phone', 0]
+for number, time in call_dict.items():
+    if time > max_list[1]:
+        max_list[0] = number
+        max_list[1] = time
+
+# This prints the phone number with the max call time.
+print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(
+    max_list[0], max_list[1]))
