@@ -43,3 +43,20 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+# First, this creates the unique_codes list, which contains all the
+# unique codes from the callers dialing from an area code in Bangalore.
+unique_codes = ['(080)', '140']
+
+
+# Second, I append the caller numbers from Bangalore to the
+# unique_codes list.
+for i in calls:
+  if i not in unique_codes:
+    if " " in i:
+      unique_codes.append(i)
+    #  if (i[0] == 7) or (i[0] == 8) or (i[0] == 9):
+    #    unique_codes.append(i)
+
+# This tests whether the codes were appended.
+print(len(unique_codes))
