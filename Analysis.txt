@@ -1,0 +1,7 @@
+Task0.py Worst Case Big O Calculation: O(11)
+Justification: The first record needs to be retrieved (+1). Then the three records
+within the first record needs to be retrieved (+3), and then they are printed (+1).
+Next, the second record is retrieved (+1), and the four items within that record are
+retrieved (+4). Then, the records are printed (+1).
+
+Task1.py Worst Case Big O Calculation: 
