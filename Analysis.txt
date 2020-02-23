@@ -4,4 +4,18 @@ within the first record needs to be retrieved (+3), and then they are printed (+
 Next, the second record is retrieved (+1), and the four items within that record are
 retrieved (+4). Then, the records are printed (+1).
 
-Task1.py Worst Case Big O Calculation: 
+Task1.py Worst Case Big O Calculation: O(4n + 4p + 2)
+Justification: The first list, texts, retrieves two items and adds each one 
+for each iteration (4n). The second list, calls, retrieves two items add adds each one
+for each iteration (4p). Finally, the set, unique_nums_set, is counted and printed (+2).
+
+Task2.py Worst Case Big O Calculation:O(4n + 3)
+Justification: The first for loop converts each item of time in the list, calls, to an integer (n).
+Next, the second for loop using calls, either creates a new entry or adds a time to an existing 
+entry in the dictionary, call_dict (n). Then, assuming the worst case scenario that every iteration of time
+is greater than the previous iteration of time in the call_dict, a new number and a new time is added
+to the max_list, a list with two items, the phone number, and the max time (2n). Finally, two items are
+retrieved and printed from max_list (+3).
+
+
+
