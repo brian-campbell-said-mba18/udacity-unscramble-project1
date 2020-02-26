@@ -44,17 +44,11 @@ to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
 
-# First, this creates the unique_codes list, which contains all the
-# unique codes from the callers dialing from an area code in Bangalore.
-# unique_codes = ['(080)']
-
-# Second, this prints a message for my Udacity Instructor.
-# print("While a fixed area code is '(080)' it is unclear what the mobile ",
-# "and telemarketer area codes are.")
-
 # First, this for loop creates a codes list and a unique codes_set,
 # appending codes based upon a conditional statement that identifies
 # fixed, telemarketer, and mobile numbers.
+# The below code comes from Reference 1 in References (see bottom
+# of this script).
 agg_code_list = []
 unique_codes = set()
 for i in calls:
@@ -72,5 +66,16 @@ for i in calls:
       agg_code_list.append(x[0:4])
       unique_codes.add(x[0:4])
 
+# This sorts the list in ascending order.
+# This code comes from Reference 2 in References.
+unique_codes = sorted(unique_codes)
+
+# This prints Part A.
+print("The numbers called by people in Bangalore have codes:")
 for i in unique_codes:
   print(i)
+
+
+# References
+# 1. https://knowledge.udacity.com/questions/70577
+# 2. https://www.tutorialgateway.org/python-set-sorted-method/
