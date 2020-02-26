@@ -46,9 +46,28 @@ The percentage should have 2 decimal digits
 
 # First, this creates the unique_codes list, which contains all the
 # unique codes from the callers dialing from an area code in Bangalore.
-unique_codes = ['(080)']
+# unique_codes = ['(080)']
 
 # Second, this prints a message for my Udacity Instructor.
-print("While a fixed area code is '(080)' it is unclear what the mobile ",
-"and telemarketer area codes are.")
+# print("While a fixed area code is '(080)' it is unclear what the mobile ",
+# "and telemarketer area codes are.")
+
+# First, this for loop creates a codes list and a unique codes_set,
+# appending codes based upon a conditional statement that identifies
+# fixed, telemarketer, and mobile numbers.
+agg_code_list = []
+unique_codes = set()
+for i in calls:
+  if i[0].startswith("(") == True:
+    x = i[1]
+    agg_code_list.append(x[1:4])
+    unique_codes.add(x[1:4])
+  elif i[0].startswith('1') == True:
+    x = i[1]
+    agg_code_list.append(x[0:4])
+    unique_codes.add(x[0:4])
+  else:
+    x = i[1]
+    agg_code_list.append(x[0:5])
+    unique_codes.add((x[0:5])
 
