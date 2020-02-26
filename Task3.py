@@ -58,16 +58,19 @@ The percentage should have 2 decimal digits
 agg_code_list = []
 unique_codes = set()
 for i in calls:
-  if i[0].startswith("(") == True:
-    x = i[1]
-    agg_code_list.append(x[1:4])
-    unique_codes.add(x[1:4])
-  elif i[0].startswith('1') == True:
-    x = i[1]
-    agg_code_list.append(x[0:4])
-    unique_codes.add(x[0:4])
-  else:
-    x = i[1]
-    agg_code_list.append(x[0:5])
-    unique_codes.add((x[0:5])
+  if i[0].startswith("(080)"):
+    if i[1].startswith('('):
+      x = i[1]
+      agg_code_list.append(x[1:4])
+      unique_codes.add(x[1:4])
+    elif i[1].startswith('1'):
+      x = i[1]
+      agg_code_list.append(x[0:4])
+      unique_codes.add(x[0:4])
+    else:
+      x = i[1]
+      agg_code_list.append(x[0:4])
+      unique_codes.add(x[0:4])
 
+for i in unique_codes:
+  print(i)
