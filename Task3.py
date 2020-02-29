@@ -75,6 +75,21 @@ print("The numbers called by people in Bangalore have codes:")
 for i in unique_codes:
   print(i)
 
+# This counts the number of calls to Bangalore numbers.
+counter = 0
+for i in agg_code_list:
+  if i == "080":
+    counter += 1
+
+# This is the denominator, the total number of calls.
+denominator = len(agg_code_list)
+
+# This calculates bangalore calls/all calls and multiplies it
+# by 100 for a percentage calculation.
+b_answer = (counter/denominator) * 100
+
+# This prints out the answer to problem B.
+print("\n{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(b_answer))
 
 # References
 # 1. https://knowledge.udacity.com/questions/70577
