@@ -9,7 +9,7 @@ Justification: The first list, texts, retrieves two items and adds each one
 for each iteration (4n). The second list, calls, retrieves two items add adds each one
 for each iteration (4p). Finally, the set, unique_nums_set, is counted and printed (+2).
 
-Task2.py Worst Case Big O Calculation:O(4n + 3)
+Task2.py Worst Case Big O Calculation: O(4n + 3)
 Justification: The first for loop converts each item of time in the list, calls, to an integer (n).
 Next, the second for loop using calls, either creates a new entry or adds a time to an existing 
 entry in the dictionary, call_dict (n). Then, assuming the worst case scenario that every iteration of time
@@ -17,5 +17,13 @@ is greater than the previous iteration of time in the call_dict, a new number an
 to the max_list, a list with two items, the phone number, and the max time (2n). Finally, two items are
 retrieved and printed from max_list (+3).
 
+Task3.py Worst Case Big O Calculation: O(5n + nlog(n) + 8)
+Justification: First, a list and a set are created (+2). Next, assuming the worst case scenario that every
+caller called from an "(080)" number and each receiving number is a unique number, each receiving number is
+assigned the variable x and appended to both the set and the list (3n). The list is then sorted (nlog(n)). Then,
+part a is answered with a print statement (+1), and a for loop (n). Next, a counter is created (+1) and assuming
+the worst, every item in the list is "080", 1 is added to the counter (n). Next, the total number of items in 
+the list are counted (+1). Then the counter/the length of the list is found and multiplied by 100 (+1). Finally,
+part b is answered with a print statement (+1) and the answer for part b is retrieved(+1).
 
 
