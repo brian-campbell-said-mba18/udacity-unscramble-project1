@@ -38,7 +38,7 @@ for i in calls:
     if i[1] not in receive_list:
         receive_list.append(i[1])
 
-# Third, this for loop creates two lists. If a number only calls,
+# Third, this for loop creates a list. If a number only calls,
 # but never receives calls, it is put into a suspects list,
 # failed_income_call_test. 
 failed_income_call_test = []
