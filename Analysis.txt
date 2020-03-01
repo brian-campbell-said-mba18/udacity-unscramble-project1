@@ -26,4 +26,22 @@ the worst, every item in the list is "080", 1 is added to the counter (n). Next,
 the list are counted (+1). Then the counter/the length of the list is found and multiplied by 100 (+1). Finally,
 part b is answered with a print statement (+1) and the answer for part b is retrieved(+1).
 
+Task4.py Worst Case Big O Calculation: O((n**2) + 6n + nlog(n) + 2np + 2p + 8)
+Justification: In the first step, a list is created (+1) and assuming that every i[0] item is unique in the 
+calls list, the number of computations is the length of the calls list (n). Second, another list is created
+(+1) and assuming that every i[1] is a unique item in the calls list, the number of computations is the 
+length of the calls list (n). Third, another list is created (+1) and assuming every item in og_list is not
+in the receive_list, then the computational steps are the lenghts of the lists squared + the length of list
+og_list (n**2 + n). Fourth, I create a new list from the texts list (+1), and assuming that the i[0] items in
+texts are unique values, then the computational steps of the for loop is the length of texts list (p). Fifth,
+I create another list (+1) that searches for all the items in the failed_income_call_test, which has length n,
+and iterates through every item in the text_senders list, which has length p, and then appends each item from the
+failed_income_call_test, which has lenght n, to the new list (np+n). Sixth, I create a new list (+1) and I iterate
+through all the worst-case assumed unique values of the texts list (p). Seventh, I create a new list (+1), and in
+my for loop, I iterate through every value in the failed_text_send_test, which has length n, and I iterate through
+every value in text_receivers, which has length p, and I append every value from failed_text_send_test (np+n). Eighth,
+I sort the final list, flagged_suspects (nlog(n)). Finally, I print a statement (+1), and I iterate and print each value
+of the final list, flagged_suspects (n).
 
+REFERENCES:
+1. https://wiki.python.org/moin/TimeComplexity
